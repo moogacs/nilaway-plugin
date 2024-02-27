@@ -66,6 +66,6 @@ custom:
           name: Bar
 ```
 
-## Usful links 
+## Useful links  
 - for more info about plugins [configuration](https://golangci-lint.run/contributing/new-linters/#configure-a-plugin).
 - for NilAway [configuration](https://github.com/uber-go/nilaway/wiki/Configuration)
