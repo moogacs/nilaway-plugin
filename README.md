@@ -25,12 +25,8 @@ Because building plugins need the dependency versions between the plugin and lin
         # Optional.
         original-url: github.com/moogacs/nilaway-plugin
         settings: # Settings are optional.
-        one: Foo
-        two:
-          - name: Bar
-        three:
-          name: Bar
-    ```
+           pretty-print: true
+           exclude-pkgs: "pkgA,pkgB"
 
 ### Github actions
 
@@ -58,12 +54,9 @@ custom:
       # Intended to point to the repo location of the linter.
       # Optional.
       original-url: github.com/moogacs/nilaway-plugin
-       settings: # Settings are optional.
-        one: Foo
-        two:
-          - name: Bar
-        three:
-          name: Bar
+      settings: # Settings are optional.
+        pretty-print: true
+        exclude-pkgs: "pkgA,pkgB"
 ```
 
 ## Useful links  
