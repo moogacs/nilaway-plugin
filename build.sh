@@ -6,9 +6,8 @@ output=$(cat $gomod)
 tools_version=$(grep 'golang.org/x/tools' <<< "$output" | grep -oE '\bv[0-9]+\.[0-9]+\.[0-9]+\b' | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
 
 go mod init github.com/nilaway-plugin
-go mod edit -replace golang.org/x/tools=golang.org/x/tools@$tools_version
+go mod tidy
+go mod edit -replace golang.org/x/tools=golang.org/x/tools@v$tools_version
 go mod tidy
 
-go build -o "$GITHUB_WORKSPACE/.plugins/nilaway.so"  -buildmode=plugin plugin/nilaway.go
-
-echo -e "nilaway.so is built compatiable with local golangci-lint."
+go build -o "$GITHUB_WORKSPACE/.plugins/nilaway.so"  -buildmode=plugin plugin/nilaway.go && echo -e "nilaway.so is built compatiable with local golangci-lint."
