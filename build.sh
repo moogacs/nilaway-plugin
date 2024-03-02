@@ -10,4 +10,4 @@ go mod tidy
 go mod edit -replace golang.org/x/tools=golang.org/x/tools@v$tools_version
 go mod tidy
 
-go build -o "$GITHUB_WORKSPACE/.plugins/nilaway.so"  -buildmode=plugin plugin/nilaway.go && echo -e "nilaway.so is built compatiable with local golangci-lint."
+go build -o "$GITHUB_WORKSPACE/.plugins/nilaway.so"  -buildmode=plugin -trimpath plugin/nilaway.go && echo -e "nilaway.so is built compatiable with local golangci-lint."
