@@ -7,9 +7,9 @@ tools_version=$(grep 'golang.org/x/tools' <<< "$output" | grep -oE '\bv[0-9]+\.[
 go_version=$(grep -oE '^go [0-9]+\.[0-9].+' <<< "$output" | cut -d ' ' -f2)
 
 local_go_version=$(go version | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
-if [[ "$go_version" != "$local_go_version" ]]; then
-  echo -e "FYI - the go version being used right now ($go_version) is not the same" \
-      "as the one from the go.mod file for golangci-lint ($local_go_version)"
+if [[ "$local_go_version" != "$go_version" ]]; then
+  echo -e "FYI - the go version being used right now ($local_go_version) is not the same" \
+      "as the one from the go.mod file for golangci-lint ($go_version)"
     echo -e "continuing the build like normal ..."
 fi
 
