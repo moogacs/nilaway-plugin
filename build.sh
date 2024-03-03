@@ -19,8 +19,8 @@ go_version=$(grep -oE '^go [0-9]+\.[0-9].+' <<< "$output" | cut -d ' ' -f2)
 
 local_go_version=$(go version | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
 if [[ "$local_go_version" != "$go_version" ]]; then
-  echo "${YELLOW}warning: local go version ($local_go_version) != go version in go.mod from golangci-lint@$1  ($go_version)${NC}"
-  echo "continuing build like normal ..."
+  echo -e "${YELLOW}warning: local go version ($local_go_version) != go version in go.mod from golangci-lint@$1  ($go_version)${NC}"
+  echo -e "continuing build like normal ..."
 fi
 
 [[ -f "go.mod" || -f "go.sum" ]] && rm -f go.*
