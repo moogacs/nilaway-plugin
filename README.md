@@ -1,6 +1,6 @@
 # nilaway-plugin
 
-nilaway, as its current form, still reports a fair number of false positives. This makes nilaway fail to be merged with golangci-lint and be offered as a linter (see [PR#4045](https://github.com/golangci/golangci-lint/issues/4045)). 
+NilAway, as its current form, still reports a fair number of false positives. This makes NilAway fail to be merged with golangci-lint and be offered as a linter (see [PR#4045](https://github.com/golangci/golangci-lint/issues/4045)). 
 
 It's a custom build plugin to add [nilaway](https://github.com/uber-go/nilaway) to golangci-lint.
 
@@ -61,4 +61,4 @@ custom:
 
 ## Useful links  
 - for more info about plugins [configuration](https://golangci-lint.run/contributing/new-linters/#configure-a-plugin).
-- for nilaway [configuration](https://github.com/uber-go/nilaway/wiki/Configuration)
+- for NilAway [configuration](https://github.com/uber-go/nilaway/wiki/Configuration)
