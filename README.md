@@ -33,7 +33,7 @@ Because building plugins need the dependency versions between the plugin and lin
     ```yaml
     custom:
       nilaway:
-        path: ./nilaway.so
+        path: .plugins/nilaway.so
         # The description of the linter.
         # Optional.
         description: This is a custom nilaway plugin linter.
