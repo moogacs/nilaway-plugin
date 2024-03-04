@@ -54,9 +54,9 @@ add this step in your gha workflow file, before the usage of golangci-lint
         git clone https://github.com/moogacs/nilaway-plugin.git
         cd nilaway-plugin
         chmod +x build.sh
-        ./build.sh v{used golangci-lint version} 
-        # for example ./build v1.54
-        #          or ./build latest
+        ./build.sh v1.X.X # or use 'latest' or 'local'
+        # the compiled .so file will be in $GITHUB_WORKSPACE/.plugins OR
+        # the current directory.
 ```
 
 add the plugin configuration to your `golangci.yaml` file, just like in the [previous section](#locally).
