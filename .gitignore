@@ -19,3 +19,7 @@
 
 # Go workspace file
 go.work
+
+# exclude go files that will be generated during build
+go.mod
+go.sum
